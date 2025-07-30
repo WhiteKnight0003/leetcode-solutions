@@ -8,7 +8,6 @@ class Solution(object):
         import math
 
         l, r = 1, max(piles)
-        min_sp = r
 
         while(l<=r):
             sum_ = 0
@@ -17,8 +16,7 @@ class Solution(object):
                 sum_ +=  math.ceil(i*1.0/mid)
             
             if sum_ <= h:
-                min_sp = mid
                 r = mid -1
             else:
                 l = mid +1
-        return min_sp
+        return l
